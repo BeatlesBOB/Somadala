@@ -1,0 +1,56 @@
+{{ form_start(form) }}
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="nom">Votre nom</span>
+    </div>
+    {{ form_row(form.nom,{'label':false,'attr':{'placeholder':'Nom d utilisateur','class':'form-control','aria-label':'Username','aria-describedby':'nom'}}) }}
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="prenom">Votre prénom</span>
+    </div>
+    {{ form_row(form.prenom,{'label':false,'attr':{'placeholder':'Prénom d utilisateur','class':'form-control','aria-label':'Username','aria-describedby':'prenom'}}) }}
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="adresse">Votre adresse</span>
+    </div>
+    {{ form_row(form.adresse,{'label':false,'attr':{'placeholder':'Nom d utilisateur','class':'form-control','aria-label':'Username','aria-describedby':'adresse'}}) }}
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="postal">Votre code postal</span>
+    </div>
+    {{ form_row(form.code_postal,{'label':false,'attr':{'placeholder':'Nom d utilisateur','class':'form-control','aria-label':'Username','aria-describedby':'postal'}}) }}
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="ville">Votre ville</span>
+    </div>
+    {{ form_row(form.ville,{'label':false,'attr':{'placeholder':'Nom d utilisateur','class':'form-control','aria-label':'Username','aria-describedby':'ville'}}) }}
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="mdp">Votre mot de passe</span>
+    </div>
+    {{ form_row(form.mdp,{'label':false,'attr':{'placeholder':'Nom d utilisateur','type':'password','class':'form-control','aria-label':'Username','aria-describedby':'mdp'}}) }}
+</div>
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="tel">Votre téléphone</span>
+    </div>
+    {{ form_row(form.telephone,{'label':false,'attr':{'placeholder':'Nom d utilisateur','class':'form-control','aria-label':'Username','aria-describedby':'tel'}}) }}
+</div>
+
+<div class="input-group mb-3">
+    <div class="input-group-prepend">
+        <span class="input-group-text" id="adresse">Votre adresse</span>
+    </div>
+    {{ form_row(form.mail,{'label':false,'attr':{'placeholder':'Nom d utilisateur','class':'form-control','aria-label':'Username','aria-describedby':'nom'}}) }}
+</div>
+    {{ form_widget(form) }}
+    <button class="btn btn-primary">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}

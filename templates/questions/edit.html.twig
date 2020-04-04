@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link href="/Css/index.css" rel="stylesheet">
+{% endblock %}
+{% block title %}Edit Questions{% endblock %}
+
+{% block body %}
+        <div class="container-fluid">
+            <h1 class="text-center">Mettre a jour la question</h1>
+            <div class="row">
+                <div class="col-6">
+                    <div class="vh-100 d-flex">
+                        <div class="align-self-center w-100">
+                            <div class="mx-auto w-75">
+                                {{ include('questions/_form.html.twig', {'button_label': 'Update'}) }}
+                                {{ include('questions/_delete_form.html.twig') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 fondMandala3">
+                </div>
+            </div>
+        </div>
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('questions_index') }}">back to list</a>
+    {% endif %}
+
+
+{% endblock %}

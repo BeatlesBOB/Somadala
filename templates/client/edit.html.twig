@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="/Css/index.css" rel="stylesheet">
+{% endblock %}
+{% block title %}Edit Client{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        <div class="container-fluid">
+            <h1 class="text-center">Editer votre profil</h1>
+            <div class="row">
+                <div class="col-6">
+                    <div class="vh-100 d-flex">
+                        <div class="align-self-center w-100">
+                            <div class="mx-auto w-50">
+                                {{ include('client/_form.html.twig', {'button_label': 'Update'}) }}
+                                {{ include('client/_delete_form.html.twig') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 fondMandala1">
+                </div>
+            </div>
+         </div>
+    </div>
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('client_index') }}">back to list</a>
+    {% endif %}
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="/Css/index.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}Client{% endblock %}
+
+{% block body %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div class="vh-100 d-flex">
+                    <div class="align-self-center w-100">
+                        <div class="mx-auto w-50">
+                            <h1>
+                                {{ client.nom }} {{ client.prenom }}</td>
+                            </h1>
+                            <ul class="list-group">
+                                <li class="list-group-item">Votre nom : {{ client.nom }}</li>
+                                <li class="list-group-item">Votre prénom : {{ client.prenom }}</li>
+                                <li class="list-group-item">Voter adresse : {{ client.adresse }}</li>
+                                <li class="list-group-item">Votre code postal : {{ client.codePostal }}</li>
+                                <li class="list-group-item">Votre Ville : {{ client.ville }}</li>
+                                <li class="list-group-item">Votre mail : {{ client.mail }}</li>
+                                <li class="list-group-item">Votre téléphone : {{ client.telephone }}</li>
+                            </ul>
+                            <div class="row">
+                                <div class="col-6">
+                                    <a class="btn btn-primary" href="{{ path('client_edit') }}">Editer</a>
+                                    <a class="btn btn-primary mt-2" href="{{ path('index') }}">Revenir à la page principale</a>
+                                </div>
+                                <div class="col-6">
+                                    {{ include('client/_delete_form.html.twig') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 fondMandala2">
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a href="{{ path('client_index') }}">back to list</a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

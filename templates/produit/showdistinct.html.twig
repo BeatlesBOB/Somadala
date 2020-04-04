@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <link href="/Css/index.css" rel="stylesheet">
+{% endblock %}
+{% block body %}
+    <div class="container">
+       <div class="row">
+           <div class="col-7">
+               <img src=" {{ produit.image }}" class="img-fluid">
+           </div>
+           <div class="col-5">
+               <h1 class="font-weight-light">{{ produit.nom }}</h1>
+               <h2 class="font-italic">{{ produit.prix }} euros - Theme {{ produit.theme.nom }}</h2>
+               <hr>
+               <div class="font-weight-lighter">
+                   {{ produit.description }}
+                   {% if app.user %}
+                       <a class="btn btn-orange-outline" href="{{ path('panier_addproduit',{id: produit.id }) }}" class="btn btn-orange"> <i class="fas fa-shopping-cart"></i>Ajouter au panier</a>
+                   {% endif %}
+               </div>
+           </div>
+       </div>
+    </div>
+{% endblock %}

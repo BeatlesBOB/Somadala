@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Questions index{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="w-25 mx-auto">
+            <img src="/Image/Question.svg" class="img-fluid">
+        </div>
+        <h1 class="text-center mt-5">Toutes les questions</h1>
+        <div class="row mt-5">
+            {% for question in questions %}
+                <div class="col-6">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h1 class="display-4">{{ question.nom }}</h1>
+                            <p class="lead">{{ question.description }}</p>
+                            <hr class="my-4">
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#question{{ question.id }}" aria-expanded="false" aria-controls="collapseExample">
+                                Voir la réponse
+                            </button>
+                            <a class="btn btn-secondary" href="{{ path('questions_edit', {'id': question.id}) }}">Répondre et modifier</a>
+
+                            <div class="collapse" id="question{{ question.id }}">
+                                <div class="card card-body">
+                                    {{ question.reponse }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-12">
+                    <h3 colspan="5">no records found</h3>
+                </div>
+            {% endfor %}
+        </div>
+        <a class="btn btn-primary" href="{{ path('questions_new') }}">Crée une nouvelle question</a>
+        <a class="btn btn-primary" href="{{ path('index') }}">Revenir à la page principale</a>
+
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+ {%  extends'base.html.twig' %}
+ {% block body %}
+  <h1>COUCOU</h1>
+  {{ form_start(form) }}
+{#  {{ form_row(form.username),{'label':nom utilisateur',attr':{'placeholder':'nom user'}}) }}
+puis supp widget#}
+  {{ form_widget(form) }}
+  <button type="submit" class="btn btn-success">Inscritpion</button>
+
+  {{ form_end(form) }}
+
+ {% endblock %}
