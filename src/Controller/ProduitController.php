@@ -49,9 +49,12 @@ class ProduitController extends AbstractController
 
         $theme = $produit->getTheme();
 
+        $prodassocie = $theme->getProduit();
+
 
         return $this->render("produit/showdistinct.html.twig",[
             'produit'=> $produit,
+            'prodassocie'=>$prodassocie
         ]);
     }
 

@@ -2,41 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="880a6286-183c-4702-a00a-fee666045970" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/knp-paginator.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Css/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/5.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/6.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/7.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/Fond.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/Image/Logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ProduitController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Contact.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/ProduitSearch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ContactType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/emails/contact.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/emails/registration.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/produit/showdistinct.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/registration.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/shared/card.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Somadala.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Somadala.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ProduitController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProduitController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Produit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Produit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Theme.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Theme.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/Voter/QuestionVoter.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Voter/QuestionVoter.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/produit/showdistinct.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/produit/showdistinct.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,6 +220,7 @@
       <workItem from="1585723104120" duration="16816000" />
       <workItem from="1585808047434" duration="12024000" />
       <workItem from="1585998799670" duration="5818000" />
+      <workItem from="1586024745391" duration="3495000" />
     </task>
     <servers />
   </component>
@@ -285,11 +259,16 @@
       <screen x="0" y="23" width="1680" height="928" />
     </state>
     <state x="658" y="418" key="NewPhpFileDialog/1680.23.1920.1057/0.23.1680.928@0.23.1680.928" timestamp="1585133008476" />
-    <state x="494" y="339" key="com.intellij.ide.util.TipDialog" timestamp="1585998817485">
-      <screen x="0" y="23" width="1680" height="928" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1586026193559">
+      <screen x="0" y="23" width="1680" height="939" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1680.939@0.23.1680.939" timestamp="1586026193559" />
+    <state x="494" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586024746431">
+      <screen x="0" y="23" width="1680" height="939" />
     </state>
     <state x="494" y="359" key="com.intellij.ide.util.TipDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1585036358709" />
     <state x="494" y="339" key="com.intellij.ide.util.TipDialog/0.23.1680.929@0.23.1680.929" timestamp="1585808047924" />
+    <state x="494" y="343" key="com.intellij.ide.util.TipDialog/0.23.1680.939@0.23.1680.939" timestamp="1586024746431" />
     <state x="494" y="339" key="com.intellij.ide.util.TipDialog/1680.23.1920.1057/0.23.1680.923@0.23.1680.923" timestamp="1585119746277" />
     <state x="494" y="339" key="com.intellij.ide.util.TipDialog/1680.23.1920.1057/0.23.1680.928@0.23.1680.928" timestamp="1585998817485" />
     <state x="494" y="343" key="com.intellij.ide.util.TipDialog/1680.23.1920.1057/0.23.1680.939@0.23.1680.939" timestamp="1585408921502" />

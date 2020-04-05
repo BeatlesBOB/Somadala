@@ -38,10 +38,12 @@ class QuestionVoter extends Voter
             case 'QUESTION_EDIT':
                 // logic to determine if the user can EDIT
                 // return true or false
+                $userRole = $user->getRoles();
+
                 if ($question->getClient()->getId() === $user->getId())
                 {
                     return true;
-                }else if ($user->getRoles() === "ROLE_ADMIN")
+                }else if ( $userRole[0] === 'ROLE_ADMIN')
                 {
                     return true;
                 }else{

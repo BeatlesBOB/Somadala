@@ -39,16 +39,18 @@ class Produit
      */
     private $prix;
 
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Theme", inversedBy="produits")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $theme;
+
 
     /**
      * @ORM\Column(type="integer")
      */
     private $quantite;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Theme", inversedBy="produit")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $theme;
 
     public function getId(): ?string
     {
@@ -104,17 +106,7 @@ class Produit
         return $this;
     }
 
-    public function getTheme(): ?Theme
-    {
-        return $this->theme;
-    }
 
-    public function setTheme(Theme $theme): self
-    {
-        $this->theme = $theme;
-
-        return $this;
-    }
 
     public function getSlug(): string {
         $slugify = new Slugify();
@@ -129,6 +121,18 @@ class Produit
     public function setQuantite(int $quantite): self
     {
         $this->quantite = $quantite;
+
+        return $this;
+    }
+
+    public function getTheme(): ?Theme
+    {
+        return $this->theme;
+    }
+
+    public function setTheme(?Theme $theme): self
+    {
+        $this->theme = $theme;
 
         return $this;
     }

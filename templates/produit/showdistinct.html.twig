@@ -3,7 +3,7 @@
     <link href="/Css/index.css" rel="stylesheet">
 {% endblock %}
 {% block body %}
-    <div class="container">
+    <div class="container mt-5">
        <div class="row">
            <div class="col-7">
                <img src=" {{ produit.image }}" class="img-fluid">
@@ -17,6 +17,30 @@
                    {% if app.user %}
                        <a class="btn btn-orange-outline" href="{{ path('panier_addproduit',{id: produit.id }) }}" class="btn btn-orange"> <i class="fas fa-shopping-cart"></i>Ajouter au panier</a>
                    {% endif %}
+               </div>
+           </div>
+           <div class="col-12">
+               <hr>
+               <h5 class="mt-5 text-center font-weight-lighter">Vous aimerez peut etre:</h5>
+               <div class="row mt-3">
+                   {% for prd in prodassocie %}
+                       <div class="col-4">
+                           <div class="card">
+                               <img src={{prd.image}} class="card-img-top" alt="...">
+                               <div class="card-footer">
+                                   <div class="row">
+                                       <div class="col-12">
+                                           <a class="btn btn-orange" href="{{ path('product_showdistinct',{id: prd.id, slug:prd.slug }) }}" class="btn btn-primary"> <i class="far fa-eye"></i>Voir le produit</a>
+                                           {% if app.user %}
+                                               <a class="btn btn-orange-outline" href="{{ path('panier_addproduit',{id: prd.id }) }}" class="btn btn-orange"> <i class="fas fa-shopping-cart"></i>Ajouter au panier</a>
+                                           {% endif %}
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+
+                       </div>
+                   {% endfor %}
                </div>
            </div>
        </div>

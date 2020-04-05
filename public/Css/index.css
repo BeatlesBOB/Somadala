@@ -27,12 +27,7 @@
 .vh-100{
     height: 100vh;
 }
-.fond{
-    background-image: url("../Image/Fond.svg");
-    background-repeat: no-repeat;
-    background-position: center;
 
-}
 .fondMandala1{
     background-image: url("../Image/1.svg");
     background-repeat: no-repeat;
