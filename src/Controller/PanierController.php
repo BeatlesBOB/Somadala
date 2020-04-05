@@ -32,6 +32,48 @@ class PanierController extends AbstractController
     }
 
     /**
+     *
+     * @Route("/validate", name="panier_validate")
+     */
+    public function validate(\Swift_Mailer $mailer ): Response
+    {
+        $user = $this->getUser();
+        $panier = $user->getPanier();
+        /**
+         * @var Produit $produit
+         */
+        $produit = $panier->getProduitId();
+
+
+        $message = (new \Swift_Message('Hello Email'))
+            ->setFrom("beatlesbob74120@gmail.com")
+            ->setTo('beatlesbob74120@gmail.com')
+            ->setSubject("Commande")
+            ->setBody(
+                $this->renderView(
+                // templates/hello/email.txt.twig
+                    'emails/commande.html.twig',
+                    [
+                        'nom' => $user->getNom(),
+                        'prenom' => $user->getPrenom(),
+                        'message' => $produit,
+                        'telephone' => $user->getTelephone(),
+                        'mail' => $user->getMail(),
+                        'produit' => $produit
+                    ]
+                ),          'text/plain'
+
+            );
+
+        $mailer->send($message);
+        return $this->render('panier/show.html.twig', [
+            'panier' => $panier,
+            'produit'=> $produit
+        ]);
+
+    }
+
+    /**
      * @Route("/MonPanier", name="panier_showMonPanier")
      */
     public function showMonPanier(ProduitRepository $produitRepository): Response
@@ -100,5 +142,7 @@ class PanierController extends AbstractController
 
         return $this->redirectToRoute('index');
     }
+
+
 
 }

@@ -30,24 +30,19 @@ class ProduitRepository extends ServiceEntityRepository
         $query = $this->findAllSearchQuery();
         if ($produitSearch->getMaxPrix()){
             $query = $query
-            ->andWhere("p.prix < :maxPrix")
+            ->andWhere("p.prix <= :maxPrix")
             ->setParameter('maxPrix', $produitSearch->getMaxPrix());
         }
         if ($produitSearch->getMinPrix()){
             $query = $query
-                ->andWhere("p.prix > :minPrix")
+                ->andWhere("p.prix >= :minPrix")
                 ->setParameter('minPrix', $produitSearch->getMinPrix());
-        }
-        if ($produitSearch->getNom()){
-            $query = $query
-                ->andWhere("p.nom < :nom")
-                ->setParameter('nom', $produitSearch->getNom());
         }
 
         if ($produitSearch->getNom()){
             $query = $query
-                ->andWhere("p.nom < :nom")
-                ->setParameter('nom', $produitSearch->getNom());
+                ->andWhere("p.nom LIKE :nom")
+                ->setParameter('nom', '%'.$produitSearch->getNom().'%');
         }
 
         if ($produitSearch->getTheme()){

@@ -58,6 +58,7 @@
                 <h2 class="Subtitle m-0 text-center"> <img src="/Image/Logo.svg" class="w-10">LES CREATIONS</h2>
             </div>
             {% if is_granted('ROLE_ADMIN') %}
+                <a  class="btn btn-primary" href="{{ path('theme_new')}}"><i class="fas fa-pen"></i> Ajouter un thème</a>
                 <a  class="btn btn-primary" href="{{ path('produit_new')}}"><i class="fas fa-pen"></i> Ajouter un produit</a>
             {% endif %}
         </div>

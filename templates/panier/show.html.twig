@@ -54,6 +54,9 @@
                             {% set prixfinal = prixfinal + product.prix %}
                             Prix total = {{ prixfinal }} $
                         </li>
+                        <li class="list-group-item">
+                            <a class="btn btn-primary" href="{{ path('panier_validate')}}"><i class="fas fa-pen"></i> valider le panier</a>
+                        </li>
                     {% endfor %}
                 </ul>
 

@@ -1,0 +1,15 @@
+Vous avez reçus une commande de la part de {{ nom }}, {{ prenom }}
+
+--------------------------------------
+la commande est la suivante :
+--------------------------------------
+{% for prod in produit %}
+    {{ prod.nom }} /
+{% endfor %}
+
+--------------------------------------
+Les moyens de contact sont :
+--------------------------------------
+°{{telephone}}
+°{{mail}}
+
